@@ -1,10 +1,10 @@
-/* Global =======´=============== */
+/* Global ===================== */
 :root {
-  --dark-blue: #41414D;
+  --dark-blue: #363f5f;
+  --green: #67E480;
+  --light-green: #67E480;
+  --red: #e92929;
   --background: #191622;
-  --background-header: #5A4B81;
-  --logo: #E1E1E6;
-  --background-card: #67E480;
 }
 
 * {
@@ -13,9 +13,25 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 93.75%; /* 15px */
+}
+
 body {
   background: var(--background);
-  font-family: "Poppins", sans-serif;
+  font-family:'Poppins', sans-serif
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .container {
@@ -23,42 +39,96 @@ body {
   margin: auto;
 }
 
-/* Titles ====================== */
+/* Titles ===================== */
 h2 {
   margin-top: 3.2rem;
   margin-bottom: 0.8rem;
-  color: #67E480;
+  color: var(--dark-blue);
 
   font-weight: normal;
 }
 
-/* Header ====================== */
+/* Links & Buttons ===================== */
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--light-green);
+}
+
+button {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+
+  color: white;
+  background: var(--green);
+
+  padding: 0;
+
+  border-radius: 0.25rem;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--light-green);
+}
+
+.button.new {
+  display: inline-block;
+  margin-bottom: .8rem;
+}
+
+.button.cancel {
+  color: var(--red);
+  border: 2px var(--red) solid;
+  border-radius: 0.25rem;
+
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.6;
+}
+
+.button.cancel:hover {
+  opacity: 1;
+}
+
+/* Header ===================== */
 header {
-  background: var(--background-header);
+  background: #5A4B81;
   padding: 2rem 0 10rem;
   text-align: center;
 }
 
 #logo {
-  color: var(--logo);
+  color: #fff;
   font-weight: 100;
 }
 
-/* Balance ====================== */
+/* Balance ===================== */
 #balance {
   margin-top: -8rem;
 }
 
 #balance h2 {
-  color: #E1E1E6;
-  margin-top: 0;
+  color:white;
+  margin-top:0;
 }
 
-/* Cards ====================== */
+/* Cards ===================== */
 .card {
-  background: #E1E1E6;
+  background: white;
   padding: 1.5rem 2rem;
   border-radius: 0.25rem;
+
   margin-bottom: 2rem;
 
   color: var(--dark-blue);
@@ -67,6 +137,10 @@ header {
 .card h3 {
   font-weight: normal;
   font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card p {
@@ -77,26 +151,39 @@ header {
 }
 
 .card.total {
-  background: var(--background-card);
+  background: var(--green);
   color: white;
 }
 
-/* Table ====================== */
+/* Table ===================== */
+#transaction {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
 #data-table {
   width: 100%;
   border-spacing: 0 0.5rem;
   color: #969cb3;
 }
 
-table thead tr th:first-child,
-table tbody tr td:first-child {
+table thead tr th:first-child, 
+table tbody tr td:first-child
+{
   border-radius: 0.25rem 0 0 0.25rem;
 }
 
+table thead tr th:last-child, 
+table tbody tr td:last-child{
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
 table thead th {
-  background: #E1E1E6;
+  background: white;
+
   font-weight: normal;
   padding: 1rem 2rem;
+
   text-align: left;
 }
 
@@ -105,13 +192,12 @@ table tbody tr {
 }
 
 table tbody tr:hover {
-  opacity: 1;
+  opacity: 1
 }
 
 table tbody td {
-  background: #E1E1E6;
+  background:white;
   padding: 1rem 2rem;
-  font-weight: normal;
 }
 
 td.description {
@@ -126,10 +212,97 @@ td.expense {
   color: #e92929;
 }
 
-/* Footer ====================== */
+/* Modal ===================== */
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.7);
+
+  position: fixed;
+  top: 0;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 999;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: #F0F2f5;
+  padding: 2.4rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Form ===================== */
+#form {
+  max-width: 500px;
+}
+
+#form h2 {
+  margin-top: 0;
+}
+
+input {
+  border: none;
+  border-radius: 0.2rem;
+
+  padding: 0.8rem;
+
+  width: 100%;
+}
+
+.input-group {
+  margin-top: 0.8rem;
+}
+
+.input-group small{
+  opacity: 0.4;
+}
+
+.input-group.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+  width: 48%;
+}
+
+
+/* Footer ===================== */
 footer {
   text-align: center;
   padding: 4rem 0 2rem;
   color: #E1E1E6;
+
   opacity: 0.6;
+}
+
+
+/* Responsive ===================== */
+@media (min-width: 800px) {
+  html {
+      font-size: 87.5%;
+  }
+
+  #balance {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+  }
 }
