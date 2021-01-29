@@ -18,10 +18,6 @@
 
   <img src="https://img.shields.io/github/stars/birobirobiro/maratona-discover-01?label=stars&message=MIT&color=8257E6&labelColor=121214" alt="Stars"> 
 
-  <img src="https://img.shields.io/github/stars/birobirobiro/maratona-discover-01?label=stars&message=MIT&color=8257E6&labelColor=121214" alt="Stars"> 
-
-<!-- [![Deploy with Vercel](https://vercel.com/button)](https://devfinances-ten.vercel.app/) -->
-
 </p>
 
 <br>
