@@ -3,10 +3,12 @@
 </h1>
 
 <p align="center">
-  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-demo">Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
+  
 </p>
 
 <p align="center">
@@ -15,6 +17,10 @@
   <img src="https://img.shields.io/github/forks/birobirobiro/maratona-discover-01?label=forks&message=MIT&color=8257E6&labelColor=121214" alt="Forks">     
 
   <img src="https://img.shields.io/github/stars/birobirobiro/maratona-discover-01?label=stars&message=MIT&color=8257E6&labelColor=121214" alt="Stars"> 
+
+  <img src="https://img.shields.io/github/stars/birobirobiro/maratona-discover-01?label=stars&message=MIT&color=8257E6&labelColor=121214" alt="Stars"> 
+
+<!-- [![Deploy with Vercel](https://vercel.com/button)](https://devfinances-ten.vercel.app/) -->
 
 </p>
 
@@ -26,18 +32,19 @@
 
 ## 🚀 Tecnologias
 
-Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
-
 - [HTML](#)
 - [CSS](#)
 - [JavaScript](#)
 
+## 💻 Demo
 
+Acesse a demo do site através deste link:
+
+* [Clique aqui](https://devfinances-ten.vercel.app/)
 ## 💻 Projeto
 
 Facilitando a sua vida financeira 💰
 
-* Teste o site acessando [por aqui](https://devfinances-ten.vercel.app/)
 
 Este é um projeto desenvolvido durante a **[MaratonaDiscover](https://maratonadiscover.rocketseat.com.br/)**, realizada pela **[@Rocketseat](https://github.com/Rocketseat)**.
 
