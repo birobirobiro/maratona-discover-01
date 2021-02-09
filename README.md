@@ -46,7 +46,7 @@ Facilitando a sua vida financeira 💰
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através dos links abaixo:
+Você pode visualizar o layout do projeto através do link abaixo:
 
 - [Layout](https://www.figma.com/file/JEfgGN7089jLXga5T9hBXt/dev.finance-Maratona-Discover-Copy) 
 
